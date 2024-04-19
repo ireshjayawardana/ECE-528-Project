@@ -1,0 +1,146 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x2F83130F2F83130F",
+      "device": "xc7k70tfbv676-1",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/MAC",
+      "name": "MAC",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1.2"
+    },
+    "design_tree": {
+      "mul_0": "",
+      "mul_1": "",
+      "add_0": ""
+    },
+    "ports": {
+      "A": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "B": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "S": {
+        "direction": "O",
+        "left": "16",
+        "right": "0"
+      }
+    },
+    "components": {
+      "mul_0": {
+        "vlnv": "xilinx.com:module_ref:mul:1.0",
+        "xci_name": "MAC_mul_0_0",
+        "xci_path": "ip\\MAC_mul_0_0\\MAC_mul_0_0.xci",
+        "inst_hier_path": "mul_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mul",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "p": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "mul_1": {
+        "vlnv": "xilinx.com:module_ref:mul:1.0",
+        "xci_name": "MAC_mul_0_1",
+        "xci_path": "ip\\MAC_mul_0_1\\MAC_mul_0_1.xci",
+        "inst_hier_path": "mul_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mul",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "p": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "add_0": {
+        "vlnv": "xilinx.com:module_ref:add:1.0",
+        "xci_name": "MAC_add_0_0",
+        "xci_path": "ip\\MAC_add_0_0\\MAC_add_0_0.xci",
+        "inst_hier_path": "add_0",
+        "parameters": {
+          "WIDTH": {
+            "value": "16"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "add",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "sum": {
+            "direction": "O",
+            "left": "16",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "add_0_sum": {
+        "ports": [
+          "add_0/sum",
+          "S"
+        ]
+      },
+      "mul_0_p": {
+        "ports": [
+          "mul_0/p",
+          "add_0/a"
+        ]
+      },
+      "mul_1_p": {
+        "ports": [
+          "mul_1/p",
+          "add_0/b"
+        ]
+      }
+    }
+  }
+}

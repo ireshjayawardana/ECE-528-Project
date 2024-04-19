@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 04/15/2024 08:06:32 PM
+// Create Date: 04/16/2024 06:17:31 PM
 // Design Name: 
-// Module Name: mul
+// Module Name: add
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,13 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mul(
-    input [7:0] a,
-    input [7:0] b,
-    output reg [15:0] p
+module add#(parameter WIDTH = 8)(
+    input [WIDTH - 1:0] a,
+    input [WIDTH - 1:0] b,
+    output reg [WIDTH:0] sum
     );
-    always @ (a or b)
-    begin
-        p = a*b;
-        end
+    
+   always @ (a or b)
+   begin
+        sum = a + b;
+   end
 endmodule
