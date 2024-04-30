@@ -26,26 +26,30 @@ parameter half_cycle = 20;
 
 reg [127:0] data_p[39:0];
 reg [127:0] data_w[39:0];
-wire [19:0] sum;
+wire  [19:0] sum;
 
 reg [127:0] p,w;
 reg [7:0] count;
 reg clk;
 wire clk2;
+reg rst;
 
+wire test;
 integer outfile;
+
+MAC uut (clk,rst,p,w,sum);
 
 assign #2 clk2 = clk;
 
-MAC uut (p,w,sum);
+
 
 initial begin
 
     $readmemh("digits_hex.txt", data_p);
     $readmemh("weights_hex.txt", data_w);
     
-    
-    
+    #30 rst = 1;
+    #10 rst =  0;
     clk = 0;
     count = 0;
     end 

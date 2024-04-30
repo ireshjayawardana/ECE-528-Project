@@ -22,9 +22,10 @@
 
 module MAC(
     input clk,rst,
-    input [127:0] data_p,
-    input [127:0] data_w,
-    output reg [19:0] sum
+    input signed [127:0] data_p,
+    input signed [127:0] data_w,
+    output reg signed [19:0] sum
+
 );
     wire [255:0] Mul_out;
     wire [135:0] l1_sum;

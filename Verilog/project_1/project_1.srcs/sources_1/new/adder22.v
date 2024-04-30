@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 04/16/2024 06:17:31 PM
+// Create Date: 04/29/2024 09:39:48 PM
 // Design Name: 
-// Module Name: add
+// Module Name: adder22
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,14 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module add#(parameter WIDTH = 8)(
-    input signed [WIDTH - 1:0] a,
-    input signed [WIDTH - 1:0] b,
-    output reg signed  [WIDTH:0] sum
+module adder22(
+    input signed [19:0] a,
+    input signed[19:0] b,
+    output signed [21:0] s
     );
     
-   always @ (a or b)
-   begin
-        sum = a + b;
-   end
+    assign s = a+ b;
+    
 endmodule

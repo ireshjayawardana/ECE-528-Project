@@ -14,3 +14,30 @@ start_gui
 open_project {C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.xpr}
 update_compile_order -fileset sources_1
 reset_project
+launch_simulation
+source MAC_TB.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source MAC_TB.tcl
+restart
+run all
+close_sim
+launch_simulation
+source MAC_TB.tcl
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+source MAC_TB.tcl
+restart
+run 10 us
+run 10 us
+run 10 us
+current_sim simulation_3
+close_sim
+launch_simulation
+launch_simulation
+reset_project
+launch_simulation
+close_sim
