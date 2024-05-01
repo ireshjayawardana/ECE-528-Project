@@ -23,11 +23,10 @@
 module add#(parameter WIDTH = 8)(
     input signed [WIDTH - 1:0] a,
     input signed [WIDTH - 1:0] b,
-    output reg signed  [WIDTH:0] sum
+    output signed  [WIDTH:0] sum
     );
     
-   always @ (a or b)
-   begin
-        sum = a + b;
-   end
+
+      assign  sum = a + b;
+
 endmodule

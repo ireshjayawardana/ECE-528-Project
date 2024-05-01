@@ -25,7 +25,9 @@ module acc(
     input [7:0] b,
     input clk,
     input rst,
-    output [21:0] dout
+    output [21:0] dout,
+    input sel,
+    input en
 );
 
     reg [21:0] accReg, muxout;
@@ -34,13 +36,17 @@ module acc(
     wire [21:0] b_ext, sum;
 
     adder22 u1 (din,muxout,sum);
-    acc_ctrl u2 (clk,rst,sel,en);
+    //    acc_ctrl u2 (clk,rst,sel,en);
 
     assign b_ext = {{14{b[7]}},b};
 
     always @ (posedge clk) begin
-        if (en)
-            dout <= sum;
+        if (rst)
+            dout <= 0;
+        else begin
+            if (en)
+                dout <= sum;
+        end
     end
     always @  (posedge clk)
     accReg <= sum;

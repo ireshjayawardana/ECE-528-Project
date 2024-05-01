@@ -21,12 +21,11 @@
 
 
 module mul(
-    input [7:0] a,
-    input [7:0] b,
-    output reg [15:0] p
+    input signed [7:0] a,
+    input signed [7:0] b,
+    output signed [15:0] p
     );
-    always @ (a or b)
-    begin
-        p = a*b;
-        end
+
+     assign p = a*b;
+
 endmodule

@@ -34,39 +34,37 @@ reg clk;
 wire clk2;
 reg rst;
 
-wire test;
 integer outfile;
 
 MAC uut (clk,rst,p,w,sum);
 
 assign #2 clk2 = clk;
 
-
-
 initial begin
-
     $readmemh("digits_hex.txt", data_p);
     $readmemh("weights_hex.txt", data_w);
     
-    #30 rst = 1;
+    #0 rst = 1;
     #10 rst =  0;
     clk = 0;
-    count = 0;
+    #0 count = 0;
     end 
     
     always #half_cycle clk = ~clk;
     
     integer i;
+    
     initial  begin
-    outfile = $fopen("simout2.txt","w");
-    for (i = 0; i < 40; i = i + 1) begin
-      # half_cycle $fwrite(outfile, "%h", sum);
+    outfile = $fopen("./simout.txt","w");
+    for (i = 0; i < 45; i = i + 1) begin
+      # half_cycle $fwrite(outfile, "%h\n", sum);
       # half_cycle count = count + 1;
-      p = data_p[count];
-      w = data_w[count];
-      if (count > 40)
-            count = 0;
+      p = data_p[i];
+      w = data_w[i];
+//      if (count > 40)
+//            count = 0;
     end
     $fclose(outfile);
+    $finish;
     end
 endmodule

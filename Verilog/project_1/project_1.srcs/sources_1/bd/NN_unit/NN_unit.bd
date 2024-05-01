@@ -1,0 +1,169 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7k70tfbv676-1",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/NN_unit",
+      "name": "NN_unit",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1.2"
+    },
+    "design_tree": {
+      "acc_ctrl_0": "",
+      "acc_0": "",
+      "MAC_0": ""
+    },
+    "components": {
+      "acc_ctrl_0": {
+        "vlnv": "xilinx.com:module_ref:acc_ctrl:1.0",
+        "xci_name": "NN_unit_acc_ctrl_0_0",
+        "xci_path": "ip\\NN_unit_acc_ctrl_0_0\\NN_unit_acc_ctrl_0_0.xci",
+        "inst_hier_path": "acc_ctrl_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "acc_ctrl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "sel": {
+            "direction": "O"
+          },
+          "en": {
+            "direction": "O"
+          }
+        }
+      },
+      "acc_0": {
+        "vlnv": "xilinx.com:module_ref:acc:1.0",
+        "xci_name": "NN_unit_acc_0_0",
+        "xci_path": "ip\\NN_unit_acc_0_0\\NN_unit_acc_0_0.xci",
+        "inst_hier_path": "acc_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "acc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "din": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "dout": {
+            "direction": "O",
+            "left": "21",
+            "right": "0"
+          },
+          "sel": {
+            "direction": "I"
+          },
+          "en": {
+            "direction": "I"
+          }
+        }
+      },
+      "MAC_0": {
+        "vlnv": "xilinx.com:module_ref:MAC:1.0",
+        "xci_name": "NN_unit_MAC_0_0",
+        "xci_path": "ip\\NN_unit_MAC_0_0\\NN_unit_MAC_0_0.xci",
+        "inst_hier_path": "MAC_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MAC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data_p": {
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "data_w": {
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "sum": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "acc_ctrl_0/rst",
+          "acc_0/rst"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "acc_ctrl_0/clk",
+          "acc_0/clk"
+        ]
+      },
+      "acc_ctrl_0_en": {
+        "ports": [
+          "acc_ctrl_0/en",
+          "acc_0/en"
+        ]
+      },
+      "acc_ctrl_0_sel": {
+        "ports": [
+          "acc_ctrl_0/sel",
+          "acc_0/sel"
+        ]
+      }
+    }
+  }
+}

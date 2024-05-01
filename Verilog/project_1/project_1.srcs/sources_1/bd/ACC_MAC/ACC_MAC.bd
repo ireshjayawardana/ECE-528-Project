@@ -1,0 +1,183 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF795627D9655E24B",
+      "device": "xc7a12tcpg238-3",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/ACC_MAC",
+      "name": "ACC_MAC",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1.2"
+    },
+    "design_tree": {
+      "MAC_0": "",
+      "ACC_unit_wrapper_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "rst": {
+        "direction": "I"
+      },
+      "pata_p": {
+        "direction": "I",
+        "left": "127",
+        "right": "0"
+      },
+      "data_w": {
+        "direction": "I",
+        "left": "127",
+        "right": "0"
+      },
+      "b": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "dout": {
+        "direction": "O",
+        "left": "21",
+        "right": "0"
+      },
+      "sumOUT": {
+        "direction": "O",
+        "left": "19",
+        "right": "0"
+      }
+    },
+    "components": {
+      "MAC_0": {
+        "vlnv": "xilinx.com:module_ref:MAC:1.0",
+        "xci_name": "ACC_MAC_MAC_0_0",
+        "xci_path": "ip\\ACC_MAC_MAC_0_0\\ACC_MAC_MAC_0_0.xci",
+        "inst_hier_path": "MAC_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MAC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data_p": {
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "data_w": {
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "sum": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          }
+        }
+      },
+      "ACC_unit_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:ACC_unit_wrapper:1.0",
+        "xci_name": "ACC_MAC_ACC_unit_wrapper_0_0",
+        "xci_path": "ip\\ACC_MAC_ACC_unit_wrapper_0_0\\ACC_MAC_ACC_unit_wrapper_0_0.xci",
+        "inst_hier_path": "ACC_unit_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ACC_unit_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "din": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "dout": {
+            "direction": "O",
+            "left": "21",
+            "right": "0"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ACC_unit_wrapper_0_dout": {
+        "ports": [
+          "ACC_unit_wrapper_0/dout",
+          "dout"
+        ]
+      },
+      "MAC_0_sum": {
+        "ports": [
+          "MAC_0/sum",
+          "sumOUT",
+          "ACC_unit_wrapper_0/din"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "clk",
+          "MAC_0/clk",
+          "ACC_unit_wrapper_0/clk"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "rst",
+          "MAC_0/rst",
+          "ACC_unit_wrapper_0/rst"
+        ]
+      },
+      "b_1": {
+        "ports": [
+          "b",
+          "ACC_unit_wrapper_0/b"
+        ]
+      },
+      "data_w_1": {
+        "ports": [
+          "data_w",
+          "MAC_0/data_w"
+        ]
+      },
+      "pata_p_1": {
+        "ports": [
+          "pata_p",
+          "MAC_0/data_p"
+        ]
+      }
+    }
+  }
+}

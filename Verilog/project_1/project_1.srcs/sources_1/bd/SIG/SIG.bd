@@ -1,0 +1,99 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xBC2490A8BC2490A8",
+      "device": "xc7a12tcpg238-3",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/SIG",
+      "name": "SIG",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ip_wrapper_0": "",
+      "sigmoid_0": ""
+    },
+    "ports": {
+      "din": {
+        "direction": "I",
+        "left": "21",
+        "right": "0"
+      },
+      "dout": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "ip_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:ip_wrapper:1.0",
+        "xci_name": "SIG_ip_wrapper_0_0",
+        "xci_path": "ip\\SIG_ip_wrapper_0_0\\SIG_ip_wrapper_0_0.xci",
+        "inst_hier_path": "ip_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ip_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "din": {
+            "direction": "I",
+            "left": "21",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          },
+          "sign": {
+            "direction": "O"
+          },
+          "ovf": {
+            "direction": "O"
+          }
+        }
+      },
+      "sigmoid_0": {
+        "vlnv": "siu.edu:user:sigmoid:1.0",
+        "xci_name": "SIG_sigmoid_0_0",
+        "xci_path": "ip\\SIG_sigmoid_0_0\\SIG_sigmoid_0_0.xci",
+        "inst_hier_path": "sigmoid_0"
+      }
+    },
+    "nets": {
+      "din_1": {
+        "ports": [
+          "din",
+          "ip_wrapper_0/din"
+        ]
+      },
+      "ip_wrapper_0_addr": {
+        "ports": [
+          "ip_wrapper_0/addr",
+          "sigmoid_0/addr"
+        ]
+      },
+      "ip_wrapper_0_ovf": {
+        "ports": [
+          "ip_wrapper_0/ovf",
+          "sigmoid_0/ovf"
+        ]
+      },
+      "ip_wrapper_0_sign": {
+        "ports": [
+          "ip_wrapper_0/sign",
+          "sigmoid_0/sign"
+        ]
+      },
+      "sigmoid_0_data": {
+        "ports": [
+          "sigmoid_0/data",
+          "dout"
+        ]
+      }
+    }
+  }
+}
