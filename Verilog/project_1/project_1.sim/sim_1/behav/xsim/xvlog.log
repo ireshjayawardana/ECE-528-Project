@@ -1,0 +1,49 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.srcs/sources_1/new/acc_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module acc_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.srcs/sources_1/new/adder22.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder22
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.srcs/sources_1/new/acc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module acc
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'dout' is not allowed [C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.srcs/sources_1/new/acc.v:34]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'sel' is not allowed [C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.srcs/sources_1/new/acc.v:35]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_unit/ip/ACC_unit_acc_ctrl_0_0/sim/ACC_unit_acc_ctrl_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_unit_acc_ctrl_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_unit/ip/ACC_unit_acc_0_0/sim/ACC_unit_acc_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_unit_acc_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_unit/sim/ACC_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.gen/sources_1/bd/ACC_unit/hdl/ACC_unit_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_unit_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.srcs/sources_1/new/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.srcs/sources_1/new/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.srcs/sources_1/new/MAC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MAC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ip/ACC_MAC_SIG_ACC_unit_wrapper_0_0/sim/ACC_MAC_SIG_ACC_unit_wrapper_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_MAC_SIG_ACC_unit_wrapper_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ip/ACC_MAC_SIG_MAC_0_0/sim/ACC_MAC_SIG_MAC_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_MAC_SIG_MAC_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dist_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/saturationLogic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module saturationLogic
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'dataOUT' is not allowed [C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/saturationLogic.v:30]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/dataConv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataConv
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'dataOUT' is not allowed [C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/dataConv.v:29]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/addrConv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addrConv
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'addrOUT' is not allowed [C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/addrConv.v:29]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/sigmoid.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sigmoid
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ip/ACC_MAC_SIG_sigmoid_0_0/sim/ACC_MAC_SIG_sigmoid_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_MAC_SIG_sigmoid_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/ip/ACC_MAC_SIG_ip_wrapper_0_0/sim/ACC_MAC_SIG_ip_wrapper_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_MAC_SIG_ip_wrapper_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.ip_user_files/bd/ACC_MAC_SIG/sim/ACC_MAC_SIG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_MAC_SIG
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.gen/sources_1/bd/ACC_MAC_SIG/hdl/ACC_MAC_SIG_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_MAC_SIG_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.srcs/sim_1/new/ACC_MAC_SIG_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ACC_MAC_SIG_tb

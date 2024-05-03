@@ -2,12 +2,12 @@
   "design": {
     "design_info": {
       "boundary_crc": "0x5CAD407F198F8421",
-      "device": "xc7k70tfbv676-1",
+      "device": "xc7a12tcpg238-3",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/ACC_unit",
       "name": "ACC_unit",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.1.2",
+      "tool_version": "2023.2",
       "validated": "true"
     },
     "design_tree": {
@@ -40,6 +40,7 @@
     "components": {
       "acc_ctrl_0": {
         "vlnv": "xilinx.com:module_ref:acc_ctrl:1.0",
+        "ip_revision": "1",
         "xci_name": "ACC_unit_acc_ctrl_0_0",
         "xci_path": "ip\\ACC_unit_acc_ctrl_0_0\\ACC_unit_acc_ctrl_0_0.xci",
         "inst_hier_path": "acc_ctrl_0",
@@ -73,6 +74,7 @@
       },
       "acc_0": {
         "vlnv": "xilinx.com:module_ref:acc:1.0",
+        "ip_revision": "1",
         "xci_name": "ACC_unit_acc_0_0",
         "xci_path": "ip\\ACC_unit_acc_0_0\\ACC_unit_acc_0_0.xci",
         "inst_hier_path": "acc_0",
@@ -148,8 +150,8 @@
       "clk_1": {
         "ports": [
           "clk",
-          "acc_ctrl_0/clk",
-          "acc_0/clk"
+          "acc_0/clk",
+          "acc_ctrl_0/clk"
         ]
       },
       "din_1": {
@@ -161,8 +163,8 @@
       "rst_1": {
         "ports": [
           "rst",
-          "acc_ctrl_0/rst",
-          "acc_0/rst"
+          "acc_0/rst",
+          "acc_ctrl_0/rst"
         ]
       }
     }

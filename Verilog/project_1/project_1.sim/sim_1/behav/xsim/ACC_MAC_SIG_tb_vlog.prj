@@ -1,0 +1,36 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/acc_ctrl.v" \
+"../../../../project_1.srcs/sources_1/new/adder22.v" \
+"../../../../project_1.srcs/sources_1/new/acc.v" \
+"../../../../project_1.ip_user_files/bd/ACC_unit/ip/ACC_unit_acc_ctrl_0_0/sim/ACC_unit_acc_ctrl_0_0.v" \
+"../../../../project_1.ip_user_files/bd/ACC_unit/ip/ACC_unit_acc_0_0/sim/ACC_unit_acc_0_0.v" \
+"../../../../project_1.ip_user_files/bd/ACC_unit/sim/ACC_unit.v" \
+"../../../../project_1.gen/sources_1/bd/ACC_unit/hdl/ACC_unit_wrapper.v" \
+"../../../../project_1.srcs/sources_1/new/add.v" \
+"../../../../project_1.srcs/sources_1/new/mul.v" \
+"../../../../project_1.srcs/sources_1/new/MAC.v" \
+"../../../../project_1.srcs/sources_1/new/ip_wrapper.v" \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/ip/ACC_MAC_SIG_ACC_unit_wrapper_0_0/sim/ACC_MAC_SIG_ACC_unit_wrapper_0_0.v" \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/ip/ACC_MAC_SIG_MAC_0_0/sim/ACC_MAC_SIG_MAC_0_0.v" \
+
+verilog dist_mem_gen_v8_0_10  \
+"../../../../project_1.ip_user_files/ipstatic/dist_mem_gen_v8_0_10/simulation/dist_mem_gen_v8_0.v" \
+
+verilog xil_defaultlib  \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/saturationLogic.v" \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/dataConv.v" \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/addrConv.v" \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/ipshared/10c3/sources_1/new/sigmoid.v" \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/ip/ACC_MAC_SIG_sigmoid_0_0/sim/ACC_MAC_SIG_sigmoid_0_0.v" \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/ip/ACC_MAC_SIG_ip_wrapper_0_0/sim/ACC_MAC_SIG_ip_wrapper_0_0.v" \
+"../../../../project_1.ip_user_files/bd/ACC_MAC_SIG/sim/ACC_MAC_SIG.v" \
+"../../../../project_1.gen/sources_1/bd/ACC_MAC_SIG/hdl/ACC_MAC_SIG_wrapper.v" \
+"../../../../project_1.srcs/sim_1/new/ACC_MAC_SIG_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

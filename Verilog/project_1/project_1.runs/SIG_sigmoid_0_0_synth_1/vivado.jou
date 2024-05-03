@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Apr 30 22:07:35 2024
+# Process ID: 9196
+# Current directory: C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.runs/SIG_sigmoid_0_0_synth_1
+# Command line: vivado.exe -log SIG_sigmoid_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SIG_sigmoid_0_0.tcl
+# Log file: C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.runs/SIG_sigmoid_0_0_synth_1/SIG_sigmoid_0_0.vds
+# Journal file: C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.runs/SIG_sigmoid_0_0_synth_1\vivado.jou
+# Running On: iresh, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34069 MB
+#-----------------------------------------------------------
+source SIG_sigmoid_0_0.tcl -notrace

@@ -1,18 +1,20 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x78D3811D9659A54D",
       "device": "xc7a12tcpg238-3",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/ACC_MAC_SIG",
       "name": "ACC_MAC_SIG",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.1.2"
+      "tool_version": "2023.2",
+      "validated": "true"
     },
     "design_tree": {
       "ACC_unit_wrapper_0": "",
       "MAC_0": "",
-      "sigmoid_0": ""
+      "sigmoid_0": "",
+      "ip_wrapper_0": ""
     },
     "ports": {
       "b": {
@@ -28,11 +30,6 @@
         "left": "127",
         "right": "0"
       },
-      "dout": {
-        "direction": "O",
-        "left": "21",
-        "right": "0"
-      },
       "pata_p": {
         "direction": "I",
         "left": "127",
@@ -41,15 +38,16 @@
       "rst": {
         "direction": "I"
       },
-      "sumOUT": {
+      "dout": {
         "direction": "O",
-        "left": "19",
+        "left": "7",
         "right": "0"
       }
     },
     "components": {
       "ACC_unit_wrapper_0": {
         "vlnv": "xilinx.com:module_ref:ACC_unit_wrapper:1.0",
+        "ip_revision": "1",
         "xci_name": "ACC_MAC_SIG_ACC_unit_wrapper_0_0",
         "xci_path": "ip\\ACC_MAC_SIG_ACC_unit_wrapper_0_0\\ACC_MAC_SIG_ACC_unit_wrapper_0_0.xci",
         "inst_hier_path": "ACC_unit_wrapper_0",
@@ -92,6 +90,7 @@
       },
       "MAC_0": {
         "vlnv": "xilinx.com:module_ref:MAC:1.0",
+        "ip_revision": "1",
         "xci_name": "ACC_MAC_SIG_MAC_0_0",
         "xci_path": "ip\\ACC_MAC_SIG_MAC_0_0\\ACC_MAC_SIG_MAC_0_0.xci",
         "inst_hier_path": "MAC_0",
@@ -134,22 +133,52 @@
       },
       "sigmoid_0": {
         "vlnv": "siu.edu:user:sigmoid:1.0",
+        "ip_revision": "2",
         "xci_name": "ACC_MAC_SIG_sigmoid_0_0",
         "xci_path": "ip\\ACC_MAC_SIG_sigmoid_0_0\\ACC_MAC_SIG_sigmoid_0_0.xci",
         "inst_hier_path": "sigmoid_0"
+      },
+      "ip_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:ip_wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "ACC_MAC_SIG_ip_wrapper_0_0",
+        "xci_path": "ip\\ACC_MAC_SIG_ip_wrapper_0_0\\ACC_MAC_SIG_ip_wrapper_0_0.xci",
+        "inst_hier_path": "ip_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ip_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "din": {
+            "direction": "I",
+            "left": "21",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          },
+          "sign": {
+            "direction": "O"
+          },
+          "ovf": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
       "ACC_unit_wrapper_0_dout": {
         "ports": [
           "ACC_unit_wrapper_0/dout",
-          "dout"
+          "ip_wrapper_0/din"
         ]
       },
       "MAC_0_sum": {
         "ports": [
           "MAC_0/sum",
-          "sumOUT",
           "ACC_unit_wrapper_0/din"
         ]
       },
@@ -179,10 +208,34 @@
           "MAC_0/data_w"
         ]
       },
+      "ip_wrapper_0_addr": {
+        "ports": [
+          "ip_wrapper_0/addr",
+          "sigmoid_0/addr"
+        ]
+      },
+      "ip_wrapper_0_ovf": {
+        "ports": [
+          "ip_wrapper_0/ovf",
+          "sigmoid_0/ovf"
+        ]
+      },
+      "ip_wrapper_0_sign": {
+        "ports": [
+          "ip_wrapper_0/sign",
+          "sigmoid_0/sign"
+        ]
+      },
       "pata_p_1": {
         "ports": [
           "pata_p",
           "MAC_0/data_p"
+        ]
+      },
+      "sigmoid_0_data": {
+        "ports": [
+          "sigmoid_0/data",
+          "dout"
         ]
       }
     }

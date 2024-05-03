@@ -1,19 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 30 16:07:12 2024" VIVADOVERSION="2022.1.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 30 22:07:24 2024" VIVADOVERSION="2023.2">
 
-  <SYSTEMINFO ARCH="kintex7" DEVICE="7k70t" NAME="ACC_unit" PACKAGE="fbv676" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a12t" NAME="ACC_unit" PACKAGE="cpg238" SPEEDGRADE="-3"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+    <PORT DIR="I" LEFT="7" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_b">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="acc_ctrl_0" PORT="clk"/>
-        <CONNECTION INSTANCE="acc_0" PORT="clk"/>
+        <CONNECTION INSTANCE="acc_0" PORT="b"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="acc_ctrl_0" PORT="rst"/>
-        <CONNECTION INSTANCE="acc_0" PORT="rst"/>
+        <CONNECTION INSTANCE="acc_0" PORT="clk"/>
+        <CONNECTION INSTANCE="acc_ctrl_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="19" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_din">
@@ -21,14 +20,15 @@
         <CONNECTION INSTANCE="acc_0" PORT="din"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="7" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_b">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="acc_0" PORT="b"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" LEFT="21" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="acc_0_dout">
       <CONNECTIONS>
         <CONNECTION INSTANCE="acc_0" PORT="dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="acc_0" PORT="rst"/>
+        <CONNECTION INSTANCE="acc_ctrl_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -43,11 +43,6 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="19" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_din">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="din"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="7" NAME="b" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_b">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="b"/>
@@ -58,9 +53,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" LEFT="19" NAME="din" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_din">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="din"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="21" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="acc_0_dout">
@@ -68,14 +63,19 @@
             <CONNECTION INSTANCE="External_Ports" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="acc_ctrl_0_sel">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="acc_ctrl_0" PORT="sel"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="acc_ctrl_0_en">
           <CONNECTIONS>
             <CONNECTION INSTANCE="acc_ctrl_0" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sel" SIGIS="undef" SIGNAME="acc_ctrl_0_sel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="acc_ctrl_0" PORT="sel"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -97,6 +97,11 @@
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="acc_ctrl_0_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="acc_0" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
@@ -105,11 +110,6 @@
         <PORT DIR="O" NAME="sel" SIGIS="undef" SIGNAME="acc_ctrl_0_sel">
           <CONNECTIONS>
             <CONNECTION INSTANCE="acc_0" PORT="sel"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="acc_ctrl_0_en">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="acc_0" PORT="en"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

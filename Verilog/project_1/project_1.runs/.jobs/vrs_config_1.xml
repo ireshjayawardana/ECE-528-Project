@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="SIG_ip_wrapper_0_0_synth_1" LaunchDir="C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.runs/SIG_ip_wrapper_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="SIG_sigmoid_0_0_synth_1" LaunchDir="C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.runs/SIG_sigmoid_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/iresh/OneDrive/Desktop/sem2/528 asic/ECE-428-Project/Verilog/project_1/project_1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="SIG_ip_wrapper_0_0_synth_1"/>
+		<Parent Id="SIG_sigmoid_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
