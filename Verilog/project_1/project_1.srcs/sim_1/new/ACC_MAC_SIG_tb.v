@@ -23,7 +23,7 @@ module ACC_MAC_SIG_tb();
 	reg [127:0] data_p[39:0]; 
 	reg [127:0] data_w[39:0]; 
 	wire [7:0] dout; 
-	wire [19:0] sumOUT;
+
 	reg [127:0] p, w; 
 	reg [7:0] b; 
 	reg [7:0] count; 
@@ -45,7 +45,7 @@ module ACC_MAC_SIG_tb();
 		rst1=1; 
 		rst2=1; 
 		b=11; 
-		#100 rst1=0; 
+		#150 rst1=0; rst2=0;
 		end
 
     always #half_cycle clk=!clk; 

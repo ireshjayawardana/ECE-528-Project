@@ -45,7 +45,8 @@ module ACC_MAC_tb();
 		rst1=1; 
 		rst2=1; 
 		b=11; 
-		#100 rst1=0; 
+		#50 rst1=0; rst2=0; 
+		
 		end
 
     always #half_cycle clk=!clk; 
@@ -68,7 +69,7 @@ always @(posedge clk2) begin
 	
 	if (!rst1) begin 
 		count= count+1; 
-		if (count==4) 
+		if (count==0) 
 			rst2 = 0; 
 		if (count==45) begin 
 			$fclose(outfile); 
