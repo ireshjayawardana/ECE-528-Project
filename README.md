@@ -45,7 +45,8 @@ The project aimed to balance hardware utilization and performance:
 - The circuit operates at 100MHz, minimizing harmonic distortions and electromagnetic radiation, reducing health risks and power consumption while meeting timing requirements.
 
 ## Repository Structure
-![image](https://github.com/user-attachments/assets/b861ff32-4c93-4b13-8b59-1f992735c58c)
+Source files - > ECE-528-Project\Verilog\project_1\project_1.srcs\sources_1\new
+Test benchs - > ECE-528-Project\Verilog\project_1\project_1.srcs\sim_1\new
 
 
 ## Usage
