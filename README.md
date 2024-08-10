@@ -7,8 +7,8 @@ This project, completed as part of ECE528, involves the hardware implementation 
 - Sigmoid Activation Function Unit (SIG)
 
 ## Team Members
-- M Iresh Jayawardana - 856566606
-- Danuka Malinda Lama Hewage - 856563910
+- M Iresh Jayawardana 
+- Danuka Malinda Lama Hewage 
 
 ## Project Milestones
 The project consists of three major milestones:
