@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"ACC_MAC_SIG": {
+			"proto_instances": {
+			}
+		}
+	}
+}
